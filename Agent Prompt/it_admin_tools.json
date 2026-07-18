@@ -1,0 +1,604 @@
+[
+  {
+    "id": "001",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "systemctl is-active nginx",
+    "description": "Check whether the NGINX service is active.",
+    "keywords": [
+      "Check whether the NGINX web server service is currently running",
+      "Verify the operational status of the web server on the machine",
+      "Confirm that the HTTP service is active and available",
+      "Determine if the production web server is up",
+      "Validate the health and uptime of the NGINX service"
+    ]
+  },
+  {
+    "id": "002",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "curl -i http://localhost",
+    "description": "Verify website availability using HTTP request.",
+    "keywords": [
+      "Check whether the website is responding to HTTP requests",
+      "Verify local web server availability using curl",
+      "Confirm the website returns a valid HTTP response",
+      "Test if the web application is accessible",
+      "Ensure the local web service is operational"
+    ]
+  },
+  {
+    "id": "003",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.101",
+    "description": "Check if machine 192.168.56.101 is reachable.",
+    "keywords": [
+      "Check whether the server machine is reachable on the network",
+      "Verify connectivity to the server using ICMP ping",
+      "Confirm that the machine is online and responding",
+      "Test network reachability of the host system",
+      "Determine if the server is up or down"
+    ]
+  },
+  {
+    "id": "004",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.102",
+    "description": "Check if machine 192.168.56.102 is reachable.",
+    "keywords": [
+      "Verify whether the target machine is reachable on the network",
+      "Check server availability using a ping request",
+      "Confirm the system is online and responding to network traffic",
+      "Test host connectivity status",
+      "Ensure the server machine is operational"
+    ]
+  },
+  {
+    "id": "008",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp -o StrictHostKeyChecking=no terry@192.168.56.103 <<< 'ls'",
+    "description": "List files on the SFTP server.",
+    "keywords": [
+      "List files available on the remote SFTP server",
+      "Verify access to the SFTP server by listing directories",
+      "Check whether the SFTP service is accessible",
+      "Confirm remote file system access via secure file transfer",
+      "Validate SFTP connectivity and permissions"
+    ]
+  },
+  {
+    "id": "009",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'put file1.txt'",
+    "description": "Upload file1.txt to SFTP server.",
+    "keywords": [
+      "Upload a file to the remote SFTP server",
+      "Transfer files securely to the server using SFTP",
+      "Verify file upload functionality on the SFTP service",
+      "Check whether data can be sent to the remote server",
+      "Perform secure file transfer to the server"
+    ]
+  },
+  {
+    "id": "010",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'get file1.txt'",
+    "description": "Download file1.txt from SFTP server.",
+    "keywords": [
+      "Download a file from the remote SFTP server",
+      "Retrieve files securely from the server",
+      "Verify SFTP download functionality",
+      "Check whether files can be accessed from the remote system",
+      "Confirm successful file transfer from the server"
+    ]
+  },
+  {
+    "id": "011",
+    "tool": "Sftp_status",
+    "intent": "LOCAL FILE LIST",
+    "command": "ls",
+    "description": "List local files on the machine.",
+    "keywords": [
+      "List files present in the local working directory",
+      "Display files available on the local system",
+      "Check the contents of the current directory",
+      "View local filesystem files using command line",
+      "Verify local file availability"
+    ]
+  },
+  {
+    "id": "016",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP SYNC CHECK",
+    "command": "chronyc tracking",
+    "description": "Check NTP synchronization status.",
+    "keywords": [
+      "Check whether the system clock is synchronized with NTP",
+      "Verify time synchronization status of the server",
+      "Monitor NTP offset and clock accuracy",
+      "Confirm the server time is properly synchronized",
+      "Validate NTP service health and timing accuracy"
+    ]
+  },
+  {
+    "id": "017",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP CLIENT CHECK",
+    "command": "sudo chronyc clients",
+    "description": "List connected NTP clients.",
+    "keywords": [
+      "List all clients connected to the NTP server",
+      "Check which systems are synchronizing time with this server",
+      "Verify active NTP client connections",
+      "Monitor NTP client activity",
+      "Confirm NTP service usage by connected machines"
+    ]
+  },
+  {
+    "id": "018",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "systemctl is-active nginx",
+    "description": "Confirm NGINX service state.",
+    "keywords": [
+      "Verify whether the NGINX service is currently running",
+      "Check the operational state of the web server",
+      "Confirm that the HTTP service is active",
+      "Ensure the web server is healthy and available",
+      "Monitor NGINX uptime and deployment status"
+    ]
+  },
+  {
+    "id": "019",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "curl -i http://localhost",
+    "description": "Check local website response.",
+    "keywords": [
+      "Confirm website response using HTTP requests",
+      "Check if the local web server is responding",
+      "Validate HTTP response from the web service",
+      "Ensure the website is available locally",
+      "Monitor web service responsiveness and uptime"
+    ]
+  },
+  {
+    "id": "020",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.101",
+    "description": "Validate server availability.",
+    "keywords": [
+      "Check whether the server is online and reachable",
+      "Ping the machine to verify network connectivity",
+      "Confirm the server is operational and active",
+      "Validate the system is responding to requests",
+      "Monitor server uptime and network availability"
+    ]
+  },
+  {
+    "id": "021",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.102",
+    "description": "Verify machine connectivity.",
+    "keywords": [
+      "Ensure the machine is online and reachable",
+      "Check network connectivity using ping",
+      "Confirm server availability and responsiveness",
+      "Monitor machine status in the network",
+      "Validate the host is operational and active"
+    ]
+  },
+  {
+    "id": "022",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'put backup.tar'",
+    "description": "Upload backup archive to SFTP server.",
+    "keywords": [
+      "Upload a backup file to the remote SFTP server",
+      "Transfer archive securely to the SFTP server",
+      "Verify upload permissions on the SFTP host",
+      "Ensure remote backup transfer completes successfully",
+      "Confirm secure file upload to server storage"
+    ]
+  },
+  {
+    "id": "023",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'get backup.tar'",
+    "description": "Download backup archive from SFTP server.",
+    "keywords": [
+      "Download backup archive from the remote SFTP server",
+      "Retrieve files securely from the SFTP host",
+      "Check if backup retrieval is successful",
+      "Ensure remote file download permissions are valid",
+      "Verify secure file transfer from the SFTP server"
+    ]
+  },
+  {
+    "id": "024",
+    "tool": "Sftp_status",
+    "intent": "LOCAL FILE LIST",
+    "command": "ls",
+    "description": "Display current directory contents.",
+    "keywords": [
+      "List all files in the current local directory",
+      "Check contents of the working directory",
+      "Verify local file availability and permissions",
+      "Display filesystem structure of the local host",
+      "Monitor local directories for stored files"
+    ]
+  },
+  {
+    "id": "025",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP SYNC CHECK",
+    "command": "chronyc tracking",
+    "description": "Monitor system clock synchronization.",
+    "keywords": [
+      "Check system clock synchronization with NTP server",
+      "Verify NTP offset and time accuracy",
+      "Confirm server clock is properly synchronized",
+      "Monitor network time protocol service health",
+      "Validate timing and precision of system clock"
+    ]
+  },
+  {
+    "id": "026",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "systemctl is-active nginx",
+    "description": "Validate that the NGINX service is currently running.",
+    "keywords": [
+      "Verify NGINX service is actively running",
+      "Confirm the operational status of web server",
+      "Ensure HTTP service availability",
+      "Check uptime and health of web server",
+      "Monitor NGINX logs and service status"
+    ]
+  },
+  {
+    "id": "027",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "curl -i http://localhost",
+    "description": "Confirm website responsiveness through HTTP request.",
+    "keywords": [
+      "Check website responsiveness using HTTP request",
+      "Verify web server responds to local requests",
+      "Confirm website availability and uptime",
+      "Monitor HTTP response from the server",
+      "Ensure web service is accessible locally"
+    ]
+  },
+  {
+    "id": "028",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.103",
+    "description": "Check if the server at 192.168.56.103 is reachable.",
+    "keywords": [
+      "Verify if the server at 192.168.56.103 is reachable",
+      "Check network connectivity to the machine",
+      "Confirm the host system is online and active",
+      "Test whether the server responds to ping requests",
+      "Ensure machine availability and network health"
+    ]
+  },
+  {
+    "id": "029",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.104",
+    "description": "Verify connectivity of machine 192.168.56.104.",
+    "keywords": [
+      "Check if the machine 192.168.56.104 is reachable",
+      "Verify server connectivity through ping",
+      "Ensure the host is online and operational",
+      "Monitor network access to the machine",
+      "Confirm the system responds to requests"
+    ]
+  },
+  {
+    "id": "030",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.105",
+    "description": "Ensure the host at 192.168.56.105 is online.",
+    "keywords": [
+      "Confirm that host 192.168.56.105 is online",
+      "Check network reachability of the machine",
+      "Verify server is up and responding",
+      "Ensure connectivity and system health",
+      "Monitor host availability in the network"
+    ]
+  },
+  {
+    "id": "031",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp -o StrictHostKeyChecking=no terry@192.168.56.103 <<< 'ls'",
+    "description": "Verify SFTP server access by listing files.",
+    "keywords": [
+      "List files to verify SFTP server access",
+      "Check whether the remote SFTP directory is accessible",
+      "Ensure SFTP connection is working properly",
+      "Confirm permissions for accessing remote files",
+      "Monitor SFTP server connectivity and status"
+    ]
+  },
+  {
+    "id": "032",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'put report.pdf'",
+    "description": "Upload report.pdf to the SFTP server.",
+    "keywords": [
+      "Upload report.pdf to the SFTP server securely",
+      "Verify successful file upload via SFTP",
+      "Check remote server storage access for upload",
+      "Ensure SFTP transfer completes without errors",
+      "Confirm permissions for sending files to the server"
+    ]
+  },
+  {
+    "id": "033",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'get report.pdf'",
+    "description": "Download report.pdf from the SFTP server.",
+    "keywords": [
+      "Download report.pdf from the remote SFTP server",
+      "Verify file retrieval through SFTP",
+      "Check if the server allows secure download",
+      "Ensure SFTP download completes successfully",
+      "Confirm access permissions for retrieving files"
+    ]
+  },
+  {
+    "id": "034",
+    "tool": "Sftp_status",
+    "intent": "LOCAL FILE LIST",
+    "command": "ls",
+    "description": "Display files present on the local system.",
+    "keywords": [
+      "List all files in the local directory",
+      "Check contents of the local filesystem",
+      "Verify availability of local files",
+      "Display files using command-line interface",
+      "Monitor local storage for existing files"
+    ]
+  },
+  {
+    "id": "035",
+    "tool": "samba_server_status",
+    "intent": "SAMBA OPERATIONS",
+    "command": "smbclient -L 192.168.56.104 -U terry -N",
+    "description": "Check availability of Samba server shares.",
+    "keywords": [
+      "Verify available Samba shares on the server",
+      "List shared directories via Samba protocol",
+      "Check network access to Samba server",
+      "Ensure the server shares are visible",
+      "Monitor Samba connectivity and status"
+    ]
+  },
+  {
+    "id": "036",
+    "tool": "samba_server_status",
+    "intent": "SAMBA OPERATIONS",
+    "command": "smbclient //192.168.56.104/SharedVM -U terry -N -c 'put notes.txt'",
+    "description": "Upload notes.txt to the Samba shared folder.",
+    "keywords": [
+      "Upload notes.txt to the Samba shared folder",
+      "Verify file transfer permissions on Samba server",
+      "Ensure successful upload to shared network directory",
+      "Confirm access to remote Samba storage",
+      "Monitor Samba server for file upload completion"
+    ]
+  },
+  {
+    "id": "037",
+    "tool": "samba_server_status",
+    "intent": "SAMBA OPERATIONS",
+    "command": "smbclient //192.168.56.104/SharedVM -U terry -N -c 'get notes.txt'",
+    "description": "Download notes.txt from Samba shared folder.",
+    "keywords": [
+      "Download notes.txt from Samba shared folder",
+      "Verify successful file retrieval from server",
+      "Check remote file access permissions",
+      "Ensure shared folder content is accessible",
+      "Monitor Samba server for download operations"
+    ]
+  },
+  {
+    "id": "038",
+    "tool": "samba_server_status",
+    "intent": "SAMBA OPERATIONS",
+    "command": "smbclient //192.168.56.104/SharedVM -U terry -N <<< 'ls'",
+    "description": "List files stored in Samba shared directory.",
+    "keywords": [
+      "List files inside the Samba shared directory",
+      "Verify content availability on shared network folder",
+      "Check access to remote Samba storage",
+      "Ensure shared directory is readable",
+      "Monitor Samba server file listings"
+    ]
+  },
+  {
+    "id": "039",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP SYNC CHECK",
+    "command": "chronyc tracking",
+    "description": "Review time synchronization and NTP offset values.",
+    "keywords": [
+      "Check system clock synchronization with NTP",
+      "Monitor time offset and clock accuracy",
+      "Verify proper synchronization with NTP server",
+      "Ensure server time is precise and reliable",
+      "Confirm NTP service is operating correctly"
+    ]
+  },
+  {
+    "id": "040",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP CLIENT CHECK",
+    "command": "sudo chronyc clients",
+    "description": "Check NTP client connections to the server.",
+    "keywords": [
+      "List all NTP clients connected to the server",
+      "Verify active NTP client connections",
+      "Monitor client synchronization status",
+      "Ensure clients are correctly receiving time updates",
+      "Confirm network time protocol client connectivity"
+    ]
+  },
+  {
+    "id": "041",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "systemctl is-active nginx",
+    "description": "Reconfirm NGINX operational state.",
+    "keywords": [
+      "Recheck whether NGINX service is active",
+      "Verify operational state of web server",
+      "Confirm web server health and uptime",
+      "Ensure service availability for production",
+      "Monitor NGINX logs and status"
+    ]
+  },
+  {
+    "id": "042",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.101",
+    "description": "Ensure server 192.168.56.101 is still online.",
+    "keywords": [
+      "Check if server 192.168.56.101 is online",
+      "Verify network connectivity to the host",
+      "Confirm machine availability and status",
+      "Ensure the server responds to ping requests",
+      "Monitor host uptime and network health"
+    ]
+  },
+  {
+    "id": "043",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'put logs.tar'",
+    "description": "Upload logs archive to SFTP server.",
+    "keywords": [
+      "Upload logs.tar to the SFTP server securely",
+      "Verify successful file transfer to remote server",
+      "Ensure SFTP upload completes without errors",
+      "Confirm access permissions for remote storage",
+      "Monitor file transfer and server connectivity"
+    ]
+  },
+  {
+    "id": "044",
+    "tool": "Sftp_status",
+    "intent": "SFTP OPERATIONS",
+    "command": "sftp terry@192.168.56.103 <<< 'get logs.tar'",
+    "description": "Retrieve logs archive from SFTP server.",
+    "keywords": [
+      "Download logs.tar from the SFTP server securely",
+      "Verify successful file retrieval",
+      "Check remote server permissions for download",
+      "Ensure backup data is accessible via SFTP",
+      "Monitor file transfer completion and integrity"
+    ]
+  },
+  {
+    "id": "045",
+    "tool": "samba_server_status",
+    "intent": "SAMBA OPERATIONS",
+    "command": "smbclient -L 192.168.56.104 -U terry -N",
+    "description": "Recheck Samba server share visibility.",
+    "keywords": [
+      "Verify visibility of Samba server shares",
+      "List accessible directories on Samba server",
+      "Check network access to shared folders",
+      "Ensure proper authentication for Samba shares",
+      "Monitor server connectivity and share availability"
+    ]
+  },
+  {
+    "id": "046",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP SYNC CHECK",
+    "command": "chronyc tracking",
+    "description": "Confirm system clock is synchronized correctly.",
+    "keywords": [
+      "Check correct synchronization of system clock",
+      "Verify NTP server offset and timing",
+      "Monitor time precision and drift",
+      "Ensure accurate system time across network",
+      "Confirm NTP service operates reliably"
+    ]
+  },
+  {
+    "id": "047",
+    "tool": "Machine_status",
+    "intent": "MACHINE STATUS CHECK",
+    "command": "ping -c 1 192.168.56.104",
+    "description": "Confirm availability of Samba server machine.",
+    "keywords": [
+      "Check if Samba server machine is online",
+      "Verify host network connectivity",
+      "Confirm machine availability and uptime",
+      "Ensure server responds to ping requests",
+      "Monitor host status and network reachability"
+    ]
+  },
+  {
+    "id": "048",
+    "tool": "Sftp_status",
+    "intent": "LOCAL FILE LIST",
+    "command": "ls",
+    "description": "Check local filesystem for available files.",
+    "keywords": [
+      "List files present in local filesystem",
+      "Verify availability of local directories",
+      "Check permissions and storage of local files",
+      "Display files in the working directory",
+      "Monitor local host filesystem status"
+    ]
+  },
+  {
+    "id": "049",
+    "tool": "Docker_tool",
+    "intent": "WEB SERVER STATUS CHECK",
+    "command": "curl -i http://localhost",
+    "description": "Perform final website availability check.",
+    "keywords": [
+      "Check website availability using HTTP request",
+      "Verify response of local web server",
+      "Confirm web service is operational",
+      "Ensure website uptime and accessibility",
+      "Monitor server response for deployment"
+    ]
+  },
+  {
+    "id": "050",
+    "tool": "Ntp_sync_check",
+    "intent": "NTP CLIENT CHECK",
+    "command": "sudo chronyc clients",
+    "description": "Final verification of connected NTP clients.",
+    "keywords": [
+      "List all active NTP clients connected to server",
+      "Verify time synchronization of connected clients",
+      "Monitor network time protocol client activity",
+      "Ensure clients receive correct system time",
+      "Confirm NTP connections and peer status"
+    ]
+  }
+]

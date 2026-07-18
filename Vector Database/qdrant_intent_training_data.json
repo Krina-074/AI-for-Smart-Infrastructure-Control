@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "text": "Check if the website is running",
+    "intent_id": "web_server_check",
+    "intent_name": "Web Server Status Check",
+    "tool": "Docker_tool",
+    "functionality": "Check NGINX service and website availability",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 2,
+    "text": "Is nginx active",
+    "intent_id": "web_server_check",
+    "intent_name": "Web Server Status Check",
+    "tool": "Docker_tool",
+    "functionality": "Check NGINX service and website availability",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 3,
+    "text": "Check all machines",
+    "intent_id": "machine_status",
+    "intent_name": "Machine Status Check",
+    "tool": "Machine_status",
+    "functionality": "Check VM and host UP/DOWN status",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 4,
+    "text": "Are any hosts down",
+    "intent_id": "machine_status",
+    "intent_name": "Machine Status Check",
+    "tool": "Machine_status",
+    "functionality": "Check VM and host UP/DOWN status",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 5,
+    "text": "List files on the SFTP server",
+    "intent_id": "sftp_list",
+    "intent_name": "SFTP List",
+    "tool": "Sftp_status",
+    "functionality": "List files on SFTP server",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 6,
+    "text": "Upload a file to SFTP",
+    "intent_id": "sftp_upload",
+    "intent_name": "SFTP Upload",
+    "tool": "Sftp_status",
+    "functionality": "Upload file to SFTP server",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 7,
+    "text": "Download file from SFTP",
+    "intent_id": "sftp_download",
+    "intent_name": "SFTP Download",
+    "tool": "Sftp_status",
+    "functionality": "Download file from SFTP server",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 8,
+    "text": "Show local files",
+    "intent_id": "local_file_list",
+    "intent_name": "Local File List",
+    "tool": "Sftp_status",
+    "functionality": "List files on local host machine",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 9,
+    "text": "List shared VM files",
+    "intent_id": "samba_list",
+    "intent_name": "Samba List",
+    "tool": "samba_server_status",
+    "functionality": "List files in Samba shared VM",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 10,
+    "text": "Is NTP synced",
+    "intent_id": "ntp_status",
+    "intent_name": "NTP Sync Check",
+    "tool": "Ntp_sync_check",
+    "functionality": "Check NTP synchronization status",
+    "confidence_required": 0.75
+  },
+  {
+    "id": 11,
+    "text": "Show NTP clients",
+    "intent_id": "ntp_clients",
+    "intent_name": "NTP Clients Check",
+    "tool": "Ntp_sync_check",
+    "functionality": "List NTP connected clients",
+    "confidence_required": 0.75
+  }
+]
